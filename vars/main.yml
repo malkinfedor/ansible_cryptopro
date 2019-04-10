@@ -1,10 +1,11 @@
 ---
+container_dir: le-8ea20.001
 dir_with_rpm: /tmp/cryptopro/linux-amd64/
 tmp_dir: /tmp/cryptopro/
 cert_dir: "{{tmp_dir}}certs/"
 # Escape every slash ("\") by adding one extra slash ("\") 
-container_name: '\\\\.\\HDIMAGE\\le-8ea20faf-9b37-40b2-88ae-b9e8c1763c1d'
-user_name: usr1cv8
+container_name: '\\\\.\\HDIMAGE\\le-123-456-34-c1d'
+user_name: user
 user_cert: "{{cert_dir}}user_cert.cer"
 cryptopro_packages: [
 "{{dir_with_rpm}}lsb-cprocsp-base-*.rpm",
@@ -14,7 +15,6 @@ cryptopro_packages: [
 "{{dir_with_rpm}}lsb-cprocsp-pkcs11-*.rpm"
 ]
 root_cert: [
-"{{cert_dir}}root.cer",
-"{{cert_dir}}uc_ekey.cer"
+"{{cert_dir}}root.cer"
 ]
 

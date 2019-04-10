@@ -44,10 +44,10 @@
 - name: Copy container's files to remote host
   become: yes
   copy:
-    src: ../files/le-8ea20.001
+    src: ../files/{{container_dir}}
     dest: "/var/opt/cprocsp/keys/{{user_name}}"
     owner: "{{user_name}}"
-  when: container_name != ""
+  when: container_dir != ""
   tags:
     - install_certificate
 
